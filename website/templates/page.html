@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Social media mining{% endblock %}
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+
+{% block page_content %}
+{% include 'include/sidebar.html' %}
+<main role="main" class="container">
+    <div class="row">
+        <div class="col">
+            {{data.text|safe}}
+        </div>
+    </div>
+</main><!-- /.container -->
+
+{{data.page}}
+
+
+{% if OriginalUserInput %}
+<center>
+    <br>
+    <br>
+    <p><b>Original Text:</b> {{OriginalUserInput}}</p>
+    <p><b>Cleaned Text:</b> {{UserInput}}</p>
+    <p><b>Flag:</b> {{result}}</p>
+</center>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+
+{% endblock %}

@@ -3,7 +3,12 @@
 <p>Type in a text and our model will analyze your entry for insults</p>
 
 
-<form class="d-flex" action="/form1/">
-  <input name="query" type="search" placeholder="Search" aria-label="Search">
+<form class="d-flex form-group green-border-focus" action="/form1/">
+  <div class="form-group">
+  <!-- <input class="form-control form-control-lg" name="query" type="search" placeholder="Enter text..." aria-label="Search"> -->
+  <textarea class="form-control" name=query id="exampleFormControlTextarea4" rows="7" placeholder="Write a text..."></textarea>
+  </div>
   <button class="btn btn-outline-success" type="submit">Search</button>
+
 </form>
+

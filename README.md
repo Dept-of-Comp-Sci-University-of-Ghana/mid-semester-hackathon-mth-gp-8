@@ -17,6 +17,9 @@ python-multipart==0.0.5
 jinja2==3.0.3
 Markdown==3.3.6
 pytest==6.2.5
+nltk
+sklearn
+
 ```
 
 ## To run this project. 

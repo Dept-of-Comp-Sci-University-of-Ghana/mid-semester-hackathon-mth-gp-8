@@ -11,7 +11,7 @@ router = APIRouter()
 templates = Jinja2Templates(directory="templates/")
 
 @router.get("/form1", response_class=HTMLResponse)
-def flagg_text(request: Request, query: Optional[str] = None):
+def flag_text(request: Request, query: Optional[str] = None):
 	"""
     A simple function that receive a query and predicts the insult potential of the content.
     :param review:
@@ -30,5 +30,5 @@ def flagg_text(request: Request, query: Optional[str] = None):
 	result = {0: "Not an insult", 1: "Insult"}
     
     # show results
-	return templates.TemplateResponse("result.html", context={"request":request, "result": result[output], "yourtext":query})
+	return templates.TemplateResponse("result.html", context={"request":request, "result": result[output], "UserInput":cleaned_query})
 
